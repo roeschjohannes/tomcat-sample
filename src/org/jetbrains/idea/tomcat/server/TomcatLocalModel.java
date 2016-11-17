@@ -503,7 +503,7 @@ public class TomcatLocalModel extends TomcatServerModel {
       if (appBase == null) appBase = "";
 
       if (!FileUtil.isAbsolute(appBase)) {
-        appBase = new File(sourceBaseDirectoryPath, appBase).getAbsolutePath();
+        appBase = new File(baseDirectoryPath, appBase).getAbsolutePath();
       }
       localHost.setAttribute(TomcatConstants.APP_BASE_ATTR, appBase);
       localHost.setAttribute(AUTO_DEPLOY_ATTR, Boolean.TRUE.toString());
